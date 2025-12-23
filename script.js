@@ -1,6 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
     initializeInteractions();
+    setupContactScroll();
 });
+
+function setupContactScroll() {
+    document.addEventListener('click', (e) => {
+        if (e.target.matches('a[href="#contact"]')) {
+            e.preventDefault();
+            const footer = document.getElementById('contact');
+            if (footer) {
+                footer.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+    });
+}
 
 function initializeInteractions() {
     const observerOptions = {

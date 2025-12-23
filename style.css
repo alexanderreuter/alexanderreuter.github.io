@@ -10,7 +10,7 @@
     --bg-secondary: #151515;
     --bg-card: #1a1a1a;
     --text-primary: #ffffff;
-    --text-secondary: #b0b0b0;
+    --text-secondary: #d4d4d4;
     --accent-primary: #2d5f3f;
     --accent-secondary: #3a7a4e;
     --accent-bright: #4a9960;
@@ -468,55 +468,83 @@ section {
 
 .footer {
     background-color: var(--bg-secondary);
-    padding: var(--spacing-xl) var(--spacing-md);
-    text-align: center;
+    padding: var(--spacing-lg) var(--spacing-md);
     border-top: 1px solid var(--border-color);
 }
 
-.footer-content h2 {
-    font-size: 2.5rem;
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
     margin-bottom: var(--spacing-md);
+}
+
+.footer-item h4 {
+    font-size: 1rem;
+    color: var(--accent-primary);
+    margin-bottom: var(--spacing-xs);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-item h4 svg {
+    flex-shrink: 0;
+}
+
+.footer-item p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.footer-item a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.footer-item a:hover {
     color: var(--text-primary);
 }
 
-.footer-content > p {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    margin-bottom: var(--spacing-md);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+.linkedin-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--accent-primary);
+    color: var(--text-primary);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    transition: all var(--transition-normal);
+    margin-top: 0.5rem;
+}
+
+.linkedin-btn:hover {
+    background-color: var(--accent-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(45, 95, 63, 0.3);
+}
+
+.linkedin-btn svg {
+    flex-shrink: 0;
 }
 
 .footer-copyright {
     margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
     color: var(--text-secondary);
     font-size: 0.9rem;
-}
-
-.contact-links {
-    display: flex;
-    gap: var(--spacing-md);
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: var(--spacing-lg) 0;
-}
-
-.contact-link {
-    padding: 0.8rem 2rem;
-    background-color: var(--bg-card);
-    color: var(--text-primary);
-    text-decoration: none;
-    border-radius: 5px;
-    border: 1px solid var(--border-color);
-    transition: all var(--transition-normal);
-}
-
-.contact-link:hover {
-    background-color: var(--accent-primary);
-    color: var(--bg-primary);
-    border-color: var(--accent-primary);
-    transform: translateY(-2px);
+    text-align: center;
 }
 
 

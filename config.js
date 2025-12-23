@@ -40,7 +40,7 @@ const portfolioConfig = {
             enabled: true,
             title: "Contact",
             navTitle: "Contact",
-            page: "contact.html"
+            page: "#contact"
         }
     }
 };
