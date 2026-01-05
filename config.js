@@ -25,7 +25,7 @@ const portfolioConfig = {
             page: "catan.html"
         },
         futuregames: {
-            enabled: false,
+            enabled: true,
             title: "Futuregames Projects",
             navTitle: "Futuregames",
             page: "futuregames.html"
