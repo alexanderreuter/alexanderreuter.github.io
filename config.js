@@ -42,6 +42,12 @@ const portfolioConfig = {
             navTitle: "Contact",
             page: "#contact"
         }
+    },
+    subpageParents: {
+        'futuregames-alien-appetite.html': 'futuregames.html',
+        'futuregames-the-neglect.html': 'futuregames.html',
+        'futuregames-iron-league.html': 'futuregames.html',
+        'futuregames-neighbourhood-accident.html': 'futuregames.html'
     }
 };
 
@@ -57,10 +63,10 @@ function initializePortfolio() {
 function generateNavigation() {
     const navMenu = document.getElementById('navMenu');
     navMenu.innerHTML = '';
-    
+
     Object.keys(portfolioConfig.sections).forEach(sectionId => {
         const section = portfolioConfig.sections[sectionId];
-        
+
         if (section.enabled) {
             const li = document.createElement('li');
             const a = document.createElement('a');
@@ -75,11 +81,16 @@ function generateNavigation() {
 }
 
 function highlightActivePage() {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    let currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('.nav-link');
-    
+
+    if (portfolioConfig.subpageParents[currentPage]) {
+        currentPage = portfolioConfig.subpageParents[currentPage];
+    }
+
     navLinks.forEach(link => {
         const linkPage = link.getAttribute('data-page');
+
         if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
             link.classList.add('active');
         }
