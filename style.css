@@ -15,13 +15,13 @@
     --accent-secondary: #3a7a4e;
     --accent-bright: #4a9960;
     --border-color: #2a2a2a;
-    
+
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
     --spacing-lg: 4rem;
     --spacing-xl: 6rem;
-    
+
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
     --transition-slow: 0.5s ease;
@@ -275,11 +275,11 @@ body {
         grid-template-columns: 1fr;
         gap: var(--spacing-md);
     }
-    
+
     .intro-name {
         font-size: 2.5rem;
     }
-    
+
     .projects-layout {
         grid-template-columns: 1fr;
     }
@@ -684,6 +684,9 @@ section {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-lg);
     margin-top: var(--spacing-lg);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .futuregames-project-card {
@@ -701,12 +704,18 @@ section {
 
 .futuregames-project-image {
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 3/4;
     background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+}
+
+.futuregames-project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .futuregames-project-content {
@@ -850,4 +859,3 @@ section {
     flex-wrap: wrap;
     margin-top: var(--spacing-md);
 }
-
