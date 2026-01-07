@@ -6,147 +6,234 @@
     <title>Alien Appetite - Alexander Reuter</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alien Appetite - Alexander Reuter</title>
-    <link rel="stylesheet" href="style.css">
-</head>
 <body>
-<nav class="navbar">
-    <div class="nav-container">
-        <a href="index.html" class="nav-logo">AR</a>
-        <ul class="nav-menu" id="navMenu">
-        </ul>
-    </div>
-</nav>
-
-<section class="section-content project-detail-page">
-    <div class="container">
-        <h1 class="project-detail-title">Alien Appetite</h1>
-
-        <div class="project-about-section">
-            <div class="project-info-column">
-                <h2>About the Project</h2>
-                <p>Content...</p>
-
-                <h3>My Contributions</h3>
-                <ul class="contributions-nav-list">
-                    <li><a href="#contribution-1">Feature/System 1</a></li>
-                    <li><a href="#contribution-2">Feature/System 2</a></li>
-                    <li><a href="#contribution-3">Health System</a></li>
-                </ul>
-
-                <h3>Project Details</h3>
-                <ul class="project-details-list">
-                    <li><strong>Team Size:</strong> 12 people</li>
-                    <li><strong>Engine:</strong> Unreal Engine</li>
-                    <li><strong>Duration:</strong> 4 weeks - Full time</li>
-                    <li><strong>Platform:</strong> PC</li>
-                </ul>
-
-                <a href="https://futuregames.itch.io/alien-appetite" target="_blank" class="itch-button">View on Itch.io →</a>
-            </div>
-
-            <div class="project-media-column">
-                <div class="project-title-image">
-                    <img src="images/alien-appetite/gp4_cover.png" alt="Alien Appetite Title">
-                </div>
-
-                <div class="project-video">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/4ePTB1NfEYk?si=_HV1y3kirKNZ2Mi-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">AR</a>
+            <ul class="nav-menu" id="navMenu">
+            </ul>
         </div>
+    </nav>
 
-        <div class="project-detail-content">
-            <div id="contribution-1" class="contribution-section">
-                <h2>Feature/System 1</h2>
-                <p>Content...</p>
-            </div>
-
-            <div id="contribution-2" class="contribution-section">
-                <h2>Feature/System 2</h2>
-                <p>Content...</p>
-            </div>
-
-            <div id="contribution-3" class="contribution-section contribution-with-image">
-                <div class="contribution-text">
-                    <h2>Health System</h2>
-                    <p>Simple health system used both by the player and the enemies. 
-                        To achieve this I used a actor component to be able to attach it to the player and enemies.</p>
-
-                    <p>The system supports:</p>
-                    <ul class="contribution-features">
-                        <li>Taking damage</li>
-                        <li>Healing HP</li>
-                        <li>Regaining HP over time</li>
-                        <li>Dying</li>
-                        <li>Handling headshots</li>
+    <section class="section-content project-detail-page">
+        <div class="container">
+            <h1 class="project-detail-title">Alien Appetite</h1>
+            
+            <div class="project-about-section">
+                <div class="project-info-column">
+                    <h2>About the Project</h2>
+                    <p>Alien Appetite was the final game project I had at Futuregames. 
+                        For this project we were tasked to make a game similar to Helldivers and Deep Rock Galactic, with requirements to complete objectives, extract etc. </p>
+                    <p>My main responsibility for this project was to handle the enemy AI. For this project I was also the Product Owner.  </p>
+                    
+                    <h3>My Contributions</h3>
+                    <ul class="contributions-nav-list">
+                        <li><a href="#contribution-1">Enemy Management</a></li>
+                        <li><a href="#contribution-2">AI Behavior</a></li>
+                        <li><a href="#contribution-3">AI Director</a></li>
+                        <li><a href="#contribution-4">Health System</a></li>
                     </ul>
+                    
+                    <h3>Project Details</h3>
+                    <ul class="project-details-list">
+                        <li><strong>Team Size:</strong> 12 people</li>
+                        <li><strong>Engine:</strong> Unreal Engine</li>
+                        <li><strong>Duration:</strong> 4 weeks - Full time</li>
+                        <li><strong>Platform:</strong> PC</li>
+                    </ul>
+                    
+                    <a href="https://futuregames.itch.io/alien-appetite" target="_blank" class="itch-button">View on Itch.io →</a>
                 </div>
-                <div class="contribution-image">
-                    <img src="images/alien-appetite/HealthComponent.png" alt="Health System">
+                
+                <div class="project-media-column">
+                    <div class="project-title-image">
+                        <img src="images/alien-appetite/gp4_cover.png" alt="Alien Appetite Title">
+                    </div>
+                    
+                    <div class="project-video">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/4ePTB1NfEYk?si=_HV1y3kirKNZ2Mi-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-detail-content">
+                <div id="contribution-1" class="contribution-section">
+                    <div class="contribution-with-image">
+                        <div class="contribution-text">
+                            <h2>Enemy Management</h2>
+                            <p>For this project I was tasked with building the foundation for two enemy types, one melee enemy and one ranged enemy.
+                                The game also supports small deviations for the melee enemy, with smaller different behaviors and looks. </p>
+
+                            <p>Managing the enemies also included spawning, drops and loot, the different behaviors, animation states and perception. </p>
+                        </div>
+                        <div class="contribution-media-column">
+                            <div class="contribution-image enemy-structure">
+                                <img src="images/alien-appetite/EnemyClassStructure.png" alt="EnemyClassStructure">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media-text-pair">
+                        <div class="pair-text">
+                            <p>Picture of the enemies in the game -></p>
+                        </div>
+                        <div class="pair-media">
+                            <div class="contribution-image enemies-showcase">
+                                <img src="images/alien-appetite/enemies.png" alt="Enemy Types">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media-text-pair">
+                        <div class="pair-text">
+                            <p>Melee Enemy Example-></p>
+                        </div>
+                        <div class="pair-media">
+                            <div class="contribution-video">
+                                <video width="100%" controls>
+                                    <source src="videos/alien-appetite/gp4_meleeEnemy.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media-text-pair">
+                        <div class="pair-text">
+                            <p>Ranged Enemy Example -></p>
+                        </div>
+                        <div class="pair-media">
+                            <div class="contribution-video">
+                                <video width="100%" controls>
+                                    <source src="videos/alien-appetite/gp4_rangedEnemy.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="contribution-2" class="contribution-section">
+                    <div class="contribution-with-image">
+                        <div class="contribution-text">
+                            <h2>AI Behavior</h2>
+                            <p>The AI behavior system consists of two main parts that work together to create dynamic enemy responses.</p>
+
+                            <p>The first part is the Behavior Tree, which contains all the task and animation logic. This includes actions like walking, attacking, searching, and patrolling.</p>
+                        </div>
+                        <div class="contribution-media-column">
+                            <div class="contribution-image ai-structure">
+                                <img src="images/alien-appetite/AI_Structure.png" alt="AI Structure">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="full-width-text">
+                        
+                        <br>
+                        <p>The second part is AI Perception, which updates the blackboard based on what the enemy senses. 
+                            The blackboard state then determines which branch of the behavior tree executes. 
+                            For example, when an enemy detects the player, it will attempt to attack. 
+                            If it loses sight of the player, it will search the area. Otherwise, it defaults to patrolling behavior.</p>
+                        
+                        <br>
+                        <p> Ranged enemy behavior tree example:</p>
+                    </div>
+
+                    <div class="full-width-image">
+                        <div class="contribution-image ranged-bt">
+                            <img src="images/alien-appetite/BT_Ranged.png" alt="Ranged Enemy Behavior Tree">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="contribution-3" class="contribution-section contribution-with-image">
+                    <div class="contribution-text">
+                        <h2>AI Director</h2>
+                        <p>To handle spawning and managing intensity in the game. I built a small AI director inspired by the one in Left 4 Dead. As the player completes objectives, the intensity level increases. 
+                            However, there are also periods of calm for the player to recollect themselves.</p>
+                        <p>The higher the stress level, the more aggressive the enemies become and new ones spawn at a higher rate. 
+                            Things affecting the stress level include are completing objectives and the pace at which players are killing enemies.</p>
+                    </div>
+                    <div class="contribution-image AI-Director">
+                        <img src="images/alien-appetite/AI%20Director%20stages.png" alt="AI Director">
+                    </div>
+                </div>
+
+                <div id="contribution-4" class="contribution-section contribution-with-image">
+                    <div class="contribution-text">
+                        <h2>Health System</h2>
+                        <p>Simple health system used both by the player and the enemies. To achieve this I used a actor component to be able to attach it to the player and enemies.</p>
+                        
+                        <p>The system supports:</p>
+                        <ul class="contribution-features">
+                            <li>Taking damage</li>
+                            <li>Healing HP</li>
+                            <li>Regaining HP over time</li>
+                            <li>Dying</li>
+                            <li>Handling headshots</li>
+                        </ul>
+                    </div>
+                    <div class="contribution-image health-system">
+                        <img src="images/alien-appetite/HealthComponent.png" alt="Health System">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<footer id="contact" class="footer">
-    <div class="footer-content">
-        <div class="footer-info">
-            <div class="footer-item">
-                <h4>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
-                    Email
-                </h4>
-                <p><a href="mailto:alexanderreuter.dev@gmail.com">alexanderreuter.dev@gmail.com</a></p>
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-item">
+                    <h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        Email
+                    </h4>
+                    <p><a href="mailto:alexanderreuter.dev@gmail.com">alexanderreuter.dev@gmail.com</a></p>
+                </div>
+                <div class="footer-item">
+                    <h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        Phone
+                    </h4>
+                    <p><a href="tel:+46767746711">+46 767 746 711</a></p>
+                </div>
+                <div class="footer-item">
+                    <h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Address
+                    </h4>
+                    <p>Västra Varvsgatan 24 Lgh 1406<br>211 15 Malmö, Sweden</p>
+                </div>
+                <div class="footer-item">
+                    <h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        LinkedIn
+                    </h4>
+                    <a href="https://www.linkedin.com/in/alexander-reuter-89b212209/" target="_blank" class="linkedin-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        View Profile
+                    </a>
+                </div>
             </div>
-            <div class="footer-item">
-                <h4>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                    </svg>
-                    Phone
-                </h4>
-                <p><a href="tel:+46767746711">+46 767 746 711</a></p>
-            </div>
-            <div class="footer-item">
-                <h4>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                        <circle cx="12" cy="10" r="3"></circle>
-                    </svg>
-                    Address
-                </h4>
-                <p>Västra Varvsgatan 24 Lgh 1406<br>211 15 Malmö, Sweden</p>
-            </div>
-            <div class="footer-item">
-                <h4>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                    LinkedIn
-                </h4>
-                <a href="https://www.linkedin.com/in/alexander-reuter-89b212209/" target="_blank" class="linkedin-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                    </svg>
-                    View Profile
-                </a>
-            </div>
+            <p class="footer-copyright">&copy; 2025 Alexander Reuter. All rights reserved.</p>
         </div>
-        <p class="footer-copyright">&copy; 2025 Alexander Reuter. All rights reserved.</p>
-    </div>
-</footer>
+    </footer>
 
-<script src="config.js"></script>
-<script src="script.js"></script>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
