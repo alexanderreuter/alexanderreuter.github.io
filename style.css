@@ -979,6 +979,30 @@ section {
     margin-top: 0;
 }
 
+.contribution-section h3 {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-xs);
+    margin-top: var(--spacing-md);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-md);
+}
+
+.team-column h3 {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .contribution-section p {
     color: var(--text-secondary);
     line-height: 1.8;
@@ -1032,7 +1056,8 @@ section {
 .contribution-features {
     list-style: none;
     padding: 0;
-    margin-top: var(--spacing-sm);
+    margin-top: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
 }
 
 .contribution-features li {
