@@ -1189,6 +1189,16 @@ section {
     object-position: 20% center;
 }
 
+.contribution-image.door-image {
+    height: 300px !important;
+    max-width: 500px;
+}
+
+.contribution-image.door-image img {
+    object-fit: contain;
+    object-position: center;
+}
+
 .full-width-image {
     width: 100%;
     margin-top: var(--spacing-sm);
