@@ -1044,6 +1044,19 @@ section {
     }
 }
 
+.team-grid-three {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+    .team-grid-three {
+        grid-template-columns: 1fr;
+    }
+}
+
 .contribution-section p {
     color: var(--text-secondary);
     line-height: 1.8;
