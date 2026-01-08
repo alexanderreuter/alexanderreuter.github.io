@@ -27,9 +27,9 @@
 
                     <h3>My Contributions</h3>
                     <ul class="contributions-nav-list">
-                        <li><a href="#contribution-1">Door Management</a></li>
-                        <li><a href="#contribution-2">Interaction System</a></li>
-                        <li><a href="#contribution-3">Level Streaming</a></li>
+                        <li><a href="#contribution-1">Level Streaming</a></li>
+                        <li><a href="#contribution-2">Door Management</a></li>
+                        <li><a href="#contribution-3">Interaction System</a></li>
                     </ul>
 
                     <h3>Project Details</h3>
@@ -55,7 +55,27 @@
             </div>
 
             <div class="project-detail-content">
-                <div id="contribution-1" class="contribution-section">
+                <div id="contribution-1" class="contribution-section contribution-with-image align-bottom">
+                    <div class="contribution-text">
+                        <h2>Level Streaming</h2>
+                        <p>In this game the player is stuck in a time loop and therefore when certain interactions happen, a lot of the environment is changing. This is a core mechanic in the game and makes it so the layout and environment in the house is continually changing.</p>
+
+                        <p>To achieve this effect we divided parts of the house into separate levels which are loaded dynamically during run time.</p>
+
+                        <p>By utilizing level streaming it makes it possible for parts of the house to be divided into smaller chunks so that only the relevant parts are taking up resources and being rendered, as well as smoothly transition changes in the house.</p>
+                    </div>
+                    <div class="contribution-media-column">
+                        <p style="color: var(--text-secondary); margin-bottom: 0.25rem;">Example of usage:</p>
+                        <div class="contribution-video">
+                            <video width="100%" controls>
+                                <source src="videos/the-neglect/LevelSteraming2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="contribution-2" class="contribution-section">
                     <div class="contribution-with-image">
                         <div class="contribution-text">
                             <h2>Door Management</h2>
@@ -142,23 +162,82 @@
                     </div>
                 </div>
 
-                <div id="contribution-2" class="contribution-section contribution-with-image">
-                    <div class="contribution-text">
-                        <h2>Interaction System</h2>
-                        <p>Content about Interaction System...</p>
-                    </div>
-                    <div class="contribution-image">
-                        <img src="images/the-neglect/interaction-system.png" alt="Interaction System">
-                    </div>
-                </div>
+                <div id="contribution-3" class="contribution-section">
+                    <div class="contribution-with-image">
+                        <div class="contribution-text">
+                            <h2>Interaction System</h2>
+                            <p>For this project I developed an interaction system that allows the player to interact with actors in the world. The system works by attaching a component to any actor you want to make interactable.</p>
 
-                <div id="contribution-3" class="contribution-section contribution-with-image">
-                    <div class="contribution-text">
-                        <h2>Level Streaming</h2>
-                        <p>Content about Level Streaming...</p>
+                            <p>Through this component you can configure different settings for the interaction and tie events to what happens when the player interacts with the object.</p>
+
+                            <p>When an actor is interactable, the player can press the interact button. A raycast from the mouse checks if it's within range and hitting the interactable hitbox, triggering the interaction. The mouse cursor visually indicates interactable objects by increasing in size when hovering over them.</p>
+
+                            <p>There are several configurable settings, as shown in the examples below:</p>
+                        </div>
+                        <div class="contribution-media-column">
+                            <div class="contribution-image interaction-image-top">
+                                <img src="images/the-neglect/interactoverviewimg.png" alt="Interaction System Top">
+                            </div>
+                            <div class="contribution-image interaction-image-bottom">
+                                <img src="images/the-neglect/InteractImg.png" alt="Interaction System">
+                            </div>
+                        </div>
                     </div>
-                    <div class="contribution-image">
-                        <img src="images/the-neglect/level-streaming.png" alt="Level Streaming">
+
+                    <div class="media-text-pair">
+                        <div class="pair-text">
+                            <p><strong>Interact</strong> - Visual feedback when hovering over interactable objects</p>
+                        </div>
+                        <div class="pair-media">
+                            <div class="contribution-video">
+                                <video width="100%" controls>
+                                    <source src="videos/the-neglect/interact_InteractHover.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media-text-pair">
+                        <div class="pair-text">
+                            <p><strong>Highlight</strong> - Outline shader applied to interactable objects on hover</p>
+                        </div>
+                        <div class="pair-media">
+                            <div class="contribution-video">
+                                <video width="100%" controls>
+                                    <source src="videos/the-neglect/interact_InteractVideo.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media-text-pair">
+                        <div class="pair-text">
+                            <p><strong>Inspect</strong> - Triggers close-up inspection mode when interacting with objects</p>
+                        </div>
+                        <div class="pair-media">
+                            <div class="contribution-video">
+                                <video width="100%" controls>
+                                    <source src="videos/the-neglect/interact_Inspect.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media-text-pair">
+                        <div class="pair-text">
+                            <p><strong>Combined</strong> - Multiple interaction features enabled together</p>
+                        </div>
+                        <div class="pair-media">
+                            <div class="contribution-video">
+                                <video width="100%" controls>
+                                    <source src="videos/the-neglect/interact_CombinedInteract.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
