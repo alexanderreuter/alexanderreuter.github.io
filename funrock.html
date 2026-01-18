@@ -42,7 +42,7 @@
                     <ul class="project-details-list">
                         <li><strong>Company:</strong> FunRock</li>
                         <li><strong>Role:</strong> Frontend Unity Developer</li>
-                        <li><strong>Duration:</strong> 9 Months </li>
+                        <li><strong>Duration:</strong> 8 Months - Full time</li>
                     </ul>
                 </div>
             </div>
@@ -50,34 +50,134 @@
             <div class="project-detail-content">
                 <div id="contribution-about" class="contribution-section">
                     <h2>About the Internship</h2>
-                    <p> Content... </p>
+
+                    <h3>Internship Overview</h3>
+                    <p>As the last part of the education at Futuregames participated in an 8 month long internship at FunRock. 
+                        FunRock is a studio with around 20 employees, based in Stockholm focused on making mainly mobile games and use Unity as the main engine. </p>
+
+                    <p>At FunRock I mainly worked on one game project during my stay. The project is a mobile rougelike turnbased game. 
+                        It is currently under development and unreleased. </p>
+
+                    <p>For this game I got to work on a lot of different things and it was mostly based on what was prioritized for the game at the moment. 
+                        This includes making new features, build tools, optimize existing code, fixing bugs and continuously play test. 
+                        For the most part I got to work on new features, some of which I'll show in the upcoming sections. </p>
+
+<!--                    <h3>The Initial Week</h3>-->
+<!--                    <p>Content...</p>-->
+
+                    <h3>Workflow at FunRock</h3>
+                    <p>FunRock follows a scrum methodology with daily stand-ups four days a week. 
+                        Once a week we had a company meeting where all project teams reported their status covering accomplishments from the previous week, current work in progress, and any blockers that needed attention.</p>
+
+                    <p>For each new feature, the process began with a tech review. Here, the lead would explain the feature requirements and suggest possible approaches for the implementation. 
+                        This was a valuable opportunity to discuss solutions and reflect on how to best build the feature. 
+                        After the tech review, I could begin working on the implementation. 
+                        Once completed, I submitted a merge request for code review. 
+                        After receiving approval, QA was notified and would test the feature before it could be considered done.</p>
+
+                    <p>FunRock also structures their code in a modular way, as the studio works on multiple projects simultaneously.
+                        This means a lot of the code and systems are reused between projects through submodules.
+                        This was important to keep in mind when developing new features ensuring compatibility and maintainability across the shared codebase.</p>
                 </div>
 
                 <div id="contribution-tooltips" class="contribution-section">
-                    <div class="contribution-with-image">
-                        <div class="contribution-text">
-                            <h2>Tooltips</h2>
-                            <p>[Content...]</p>
-                        </div>
-                        <div class="contribution-media-column">
-                            <div class="contribution-image">
-                                <img src="images/funrock/tooltips.png" alt="Tooltips">
-                            </div>
-                        </div>
+                    <h2>Tooltips</h2>
+
+                    <div class="contribution-video" style="float: right; max-width: 400px; margin: 2rem 0 1rem 3rem;">
+                        <video autoplay loop muted playsinline>
+                            <source src="videos/FunRock/tooltips_vid.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <p>The tooltips is a UI system that handles displaying tooltips when there is a specific word
+                        that needs explaining in any description. What this system enables is highlighting
+                        words, along with adding icons and emojis, to then display a tooltip when clicking on the highlighted word.</p>
+
+                    <p>See video for example --></p>
+
+                    <p>The system uses a two layer setup built with Unity and NGUI, a reusable core that's shared across projects, and a game specific layer on top.
+                        It handles things like fetching content on demand, clickable links inside text, keeping tooltips on screen.</p>
+
+                    <p>Some of the more interesting parts include a resolver pattern that grabs content when needed and caches it for later, and inline tooltip links where keywords in descriptions become clickable.
+                        The system also automatically repositions tooltips so they don't get cut off at the screen edges.</p>
+
+                    <p>The architecture keeps the core tooltip logic separate from game specific code, which means it can be reused across other projects.</p>
+
+                    <div style="clear: both;"></div>
+
+                    <div style="margin-top: 0rem;">
+                        <p><strong>Areas worth highlighting</strong></p>
+                        <ul>
+                            <li><strong>Separation of Concerns</strong> - Core tooltip infrastructure is fully decoupled from game logic, making it reusable across projects.</li>
+                            <li><strong>Processing Priority System</strong> - Tooltips have priority values to resolve tag conflicts during text formatting.</li>
+                            <li><strong>Stackable Popup Pattern</strong> - Multiple tooltips can display simultaneously with proper depth management.</li>
+                            <li><strong>Lazy Initialization</strong> - The system only initializes on first access, ensuring all dependencies are loaded.</li>
+                            <li><strong>Localization Ready</strong> - Built-in path-based localization support.</li>
+                        </ul>
+                    </div>
+
+                    <div class="contribution-full-width-image" style="text-align: center; margin-top: 2rem;">
+                        <p><strong>Data Flow Diagram</strong></p>
+                        <img src="images/FunRock/Tooltips/tooltipsDiagram.png" alt="Tooltips Diagram" style="max-width: 100%; width: 775px;">
                     </div>
                 </div>
 
                 <div id="contribution-game-properties" class="contribution-section">
-                    <div class="contribution-with-image">
-                        <div class="contribution-text">
-                            <h2>Game Properties</h2>
-                            <p>[Content...]</p>
+                    <h2>Game Properties</h2>
+
+                    <p>The game property tool is a tool I worked on to help developers to easily get an overview of the properties in the game.
+                        It provides a unified interface for viewing, searching, and editing the properties and seeing which properties are connected to each other.</p>
+                    <br>
+
+                    <div style="float: right; max-width: 750px; margin: 0 -2rem 1rem 1rem;">
+                        <div class="contribution-image">
+                            <img src="images/FunRock/GameProperties/gameproperties_1.png" alt="Game Properties 1" style="width: 100%; height: auto;">
                         </div>
-                        <div class="contribution-media-column">
-                            <div class="contribution-image">
-                                <img src="images/funrock/game-properties.png" alt="Game Properties">
-                            </div>
+                        <div class="contribution-image" style="margin-top: 2rem;">
+                            <img src="images/FunRock/GameProperties/gameproperties_2.png" alt="Game Properties 2" style="width: 100%; height: auto;">
                         </div>
+                    </div>
+
+                    <p style="margin-bottom: 0.3rem;"><strong>Overarching Property System</strong></p>
+                    <ul class="contribution-features" style="margin-top: 0;">
+                        <li>Toggle between "Powerup" (abilities, enchantments, etc) and "Character" (monsters, bosses, companions, etc).</li>
+                        <li>Searchable by ID, name, or description.</li>
+                        <li>Real time filtering across 600+ properties.</li>
+                        <li>Easily select and find the property in the editor.</li>
+                    </ul>
+
+                    <br>
+                    
+                    <p style="margin-bottom: 0.3rem;"><strong>Powerup Visualization</strong></p>
+                    <ul class="contribution-features" style="margin-top: 0;">
+                        <li>Icon preview with rarity color-coding.</li>
+                        <li>Availability status tracking (Available/Complete/Incomplete).</li>
+                        <li>Pack categorization.</li>
+                        <li>Live description preview with resolved tooltip references.</li>
+                        <li>Missing icon warnings.</li>
+                    </ul>
+
+                    <br>
+                    
+                    <p style="margin-bottom: 0.3rem;"><strong>Character Visualization</strong></p>
+                    <ul class="contribution-features" style="margin-top: 0;">
+                        <li>Stat table with color heat-mapping (orange → green → blue gradient).</li>
+                        <li>Avatar icons with status indicators.</li>
+                        <li>Character-specific fields: Tier, Difficulty, Enchantment slots (Monsters), Rarity (Companions), Face portraits (Bosses).</li>
+                        <li>Clickable associated powerups list.</li>
+                    </ul>
+
+                    <div style="clear: both;"></div>
+
+                    <div style="margin-top: 2rem;">
+                        <p><strong>Areas worth highlighting</strong></p>
+                        <ul class="contribution-features">
+                            <li><strong>Bidirectional Asset Caching</strong> - Static dictionaries indexed by directory and TypeID.</li>
+                            <li><strong>Asset Unlinking Pattern</strong> - Converts direct sprite references to resource paths, reducing deployment dependencies.</li>
+                            <li><strong>Extensible Validation</strong> - Error checkers register custom logic with auto fix capabilities.</li>
+                            <li><strong>Tooltip Integration</strong> - Integrates with the tooltip database to parse descriptions in real time. 
+                                Resolved references render in a calculated darker shade of the current GUI color. Missing tooltips are immediately visible with a red error message.</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -85,11 +185,20 @@
                     <div class="contribution-with-image">
                         <div class="contribution-text">
                             <h2>Codex</h2>
-                            <p>[Content...]</p>
+                            <p>The Codex serves as both an encyclopedia and collection tracker, 
+                                that the player can access in between runs. 
+                                Monsters, bosses, and enchantments start hidden and are progressively revealed as players encounter them.
+                                This turns each discovery into a permanent unlock that exposes the entity's stats, abilities, etc.
+                            </p>
+                            
+                            
                         </div>
                         <div class="contribution-media-column">
-                            <div class="contribution-image">
-                                <img src="images/funrock/codex.png" alt="Codex">
+                            <div class="contribution-image" style="max-width: 350px; margin-left: auto;">
+                                <img src="images/FunRock/Codex/codex_1.png" alt="Codex 1" style="width: 100%; height: auto;">
+                            </div>
+                            <div class="contribution-image" style="max-width: 350px; margin-top: 1rem; margin-left: auto;">
+                                <img src="images/FunRock/Codex/codex_2.png" alt="Codex 2" style="width: 100%; height: auto;">
                             </div>
                         </div>
                     </div>
