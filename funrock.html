@@ -61,10 +61,7 @@
                     <p>For this game I got to work on a lot of different things and it was mostly based on what was prioritized for the game at the moment. 
                         This includes making new features, build tools, optimize existing code, fixing bugs and continuously play test. 
                         For the most part I got to work on new features, some of which I'll show in the upcoming sections. </p>
-
-<!--                    <h3>The Initial Week</h3>-->
-<!--                    <p>Content...</p>-->
-
+                    
                     <h3>Workflow at FunRock</h3>
                     <p>FunRock follows a scrum methodology with daily stand-ups four days a week. 
                         Once a week we had a company meeting where all project teams reported their status covering accomplishments from the previous week, current work in progress, and any blockers that needed attention.</p>
@@ -78,6 +75,8 @@
                     <p>FunRock also structures their code in a modular way, as the studio works on multiple projects simultaneously.
                         This means a lot of the code and systems are reused between projects through submodules.
                         This was important to keep in mind when developing new features ensuring compatibility and maintainability across the shared codebase.</p>
+
+                    <h3>Disclaimer</h3>
                 </div>
 
                 <div id="contribution-tooltips" class="contribution-section">
@@ -182,53 +181,150 @@
                 </div>
 
                 <div id="contribution-codex" class="contribution-section">
-                    <div class="contribution-with-image">
-                        <div class="contribution-text">
-                            <h2>Codex</h2>
-                            <p>The Codex serves as both an encyclopedia and collection tracker, 
-                                that the player can access in between runs. 
-                                Monsters, bosses, and enchantments start hidden and are progressively revealed as players encounter them.
-                                This turns each discovery into a permanent unlock that exposes the entity's stats, abilities, etc.
-                            </p>
-                            
-                            
+                    <h2>Codex</h2>
+
+                    <div style="float: right; max-width: 350px; margin: 0 0 1rem 2rem;">
+                        <div class="contribution-image">
+                            <img src="images/FunRock/Codex/codex_1.png" alt="Codex 1" style="width: 100%; height: auto;">
                         </div>
-                        <div class="contribution-media-column">
-                            <div class="contribution-image" style="max-width: 350px; margin-left: auto;">
-                                <img src="images/FunRock/Codex/codex_1.png" alt="Codex 1" style="width: 100%; height: auto;">
-                            </div>
-                            <div class="contribution-image" style="max-width: 350px; margin-top: 1rem; margin-left: auto;">
-                                <img src="images/FunRock/Codex/codex_2.png" alt="Codex 2" style="width: 100%; height: auto;">
-                            </div>
+                        <div class="contribution-image" style="margin-top: 1rem;">
+                            <img src="images/FunRock/Codex/codex_2.png" alt="Codex 2" style="width: 100%; height: auto;">
                         </div>
+                    </div>
+
+                    <p>The Codex serves as both an encyclopedia and collection tracker,
+                        that the player can access in between runs.
+                        Monsters, bosses, and enchantments start hidden and are progressively revealed as players encounter them.
+                        This turns each discovery into a permanent unlock that exposes the entity's stats, abilities, etc.
+                    </p>
+
+                    <p style="margin-bottom: 0.7rem;"><strong>Implementation</strong></p>
+
+                    <p style="margin-top: 0;">The Codex required building setting up UI using NGUI, including tabbed navigation, paginated grids, and a filter panel.
+                        Each entry type (Monster, Boss, Enchantment) has its own prefab and display class, inheriting from a shared base that handles common functionality like hiding undiscovered content and subscribing to state change events.</p>
+
+                    <p>On the data side, the UserDiscoveries manager tracks discovery state and encounter counts.
+                        The UI pulls entity data from the database (monsters, bosses, enchantments) and joins it with the player's discovery records to determine what to reveal.</p>
+
+                    <p>Discovery triggers are integrated into the gameplay loop. Whenever the player encounters an entity part of the codex for the first time,
+                        the discovery state is updated which updates the Codex.
+                        The system also connects to the achievement framework, firing events when discovery milestones are reached, making implementing claimable rewards possible.</p>
+
+                    <div style="margin-top: 2rem; max-width: 640px;">
+                        <p><strong>Discovery Flow Diagram</strong></p>
+                        <img src="images/FunRock/Codex/codexDiagram.png" alt="Codex Diagram" style="width: 100%; height: auto;">
+                    </div>
+
+                    <div style="clear: both;"></div>
+
+                    <div style="margin-top: 2rem;">
+                        <p><strong>Areas worth highlighting</strong></p>
+                        <ul class="contribution-features">
+                            <li><strong>Event Driven UI Updates</strong> - Exposes OnStateChanged event that UI elements subscribe to. When a discovery is triggered, all displayed entries for that entity update automatically without screen refresh. Proper cleanup in OnDestroy prevents memory leaks.</li>
+<!--                            <li><strong>Polymorphic Filter System</strong> - Discovery based filtering. Codex Entry Data overrides to add rarity filtering while calling base first, extension without modifying base logic.</li>-->
+                            <li><strong>Mutually Exclusive Filter Groups</strong> - Rarity filters are treated as a radio group, selecting one automatically deselects others. A OnFilterChanged handler detects rarity filters and clears the entire group before applying the new selection.</li>
+                            <li><strong>Initialization with Caching</strong> - Codex Entry Collection instances are created once per section and cached. Property data is joined with user discovery data via factory methods that perform the join on first access only.</li>
+                            <li><strong>Per Section Page State</strong> - Dictionary maintains independent page positions for each tab. Switching tabs remembers where you were.</li>
+                        </ul>
                     </div>
                 </div>
 
                 <div id="contribution-pantheon" class="contribution-section">
-                    <div class="contribution-with-image">
-                        <div class="contribution-text">
-                            <h2>Pantheon</h2>
-                            <p>[Content...]</p>
+                    <h2>Pantheon</h2>
+
+                    <div style="float: right; max-width: 375px; margin: 0 0 1rem 2rem;">
+                        <div class="contribution-image" style="height: auto; overflow: visible;">
+                            <img src="images/FunRock/Pantheon/pantheon_2.png" alt="Pantheon" style="width: 100%; height: auto; object-fit: contain;">
                         </div>
-                        <div class="contribution-media-column">
-                            <div class="contribution-image">
-                                <img src="images/funrock/pantheon.png" alt="Pantheon">
-                            </div>
+                        <div class="contribution-image" style="height: auto; overflow: visible; margin-top: 1rem;">
+                            <img src="images/FunRock/Pantheon/panthonDiagram.png" alt="Pantheon Diagram" style="width: 100%; height: auto; object-fit: contain;">
                         </div>
                     </div>
+
+                    <p>The pantheon feature is a meta progression system that allows the player to spend the gathered resources in the world to deities, in between runs.
+                        The deity upgrades will boost stats for the up and coming runs. Each deity gives different bonuses and requires different resources to upgrade.</p>
+
+                    <p>The system mainly consists of three parts: the Pantheon database, the applying of the effects of the pantheon, and setting up the UI.</p>
+
+                    <p style="margin-bottom: 0.3rem;"><strong>Data Architecture</strong></p>
+                    <p style="margin-top: 0;">The pantheon data is defined through Scriptable Objects that define each deity's identity, perk type, and upgrade costs per level.
+                        A UserPantheonData manager tracks the player's upgrade progress and handles the upgrade, validating affordability, subtracting resources, and persisting the new level.</p>
+
+                    <p style="margin-bottom: 0.3rem;"><strong>Effect Application</strong></p>
+                    <p style="margin-top: 0;">At the start of each run the effect of all the upgraded deities are applied into the hero configuration.
+                        The system uses a polymorphic perk architecture. A PerkBase factory creates typed PersistentPerk instances (StatIncreasePerk, LootChanceIncreasePerk, etc.) that are filtered and summed by type using LINQ.</p>
+
+                    <p style="margin-bottom: 0.3rem;"><strong>UI</strong></p>
+                    <p style="margin-top: 0;">The UI displays all nine deities in a grid, with each PantheonElement showing the current level and a progress bar toward the next upgrade.
+                        Selecting a deity reveals its portrait, description, current/next bonus values, and upgrade cost.
+                        The screen subscribes to OnPantheonChanged for real time updates when upgrades occur.</p>
+
+                    <div style="margin-top: 2rem;">
+                        <p><strong>Technical Highlights</strong></p>
+                        <ul class="contribution-features">
+                            <li><strong>Scalability</strong> - The decoupled data approach allows designers to add new deities or balance costs without touching the core logic.</li>
+                            <li><strong>Factory Pattern for Perks</strong> - PerkBase.CreateRuntimeData() switches on PerkType enum to instantiate the correct perk subclass. Each perk type carries its own data (StatType for stat perks, LootType for loot perks) and accumulates values via AddValue().</li>
+                            <li><strong>LINQ-Based Bonus Aggregation</strong> - Calculating total bonuses uses type filtering and projection, keeping the aggregation logic concise and type-safe.</li>
+                            <li><strong>Localization Integration</strong> - Deity names, descriptions, and benefit text are pulled from localization sheets on load via SyncWithLocalization(), using a {SheetName}/{Field}/{ID} key pattern.</li>
+                            <li><strong>Observer Pattern</strong> - The UI subscribes to an OnPantheonChanged event, ensuring the display updates instantly when an upgrade is purchased without requiring a menu reload.</li>
+                        </ul>
+                    </div>
+
+                    <div style="clear: both;"></div>
                 </div>
 
                 <div id="contribution-minimap" class="contribution-section">
-                    <div class="contribution-with-image">
-                        <div class="contribution-text">
-                            <h2>Minimap</h2>
-                            <p>[Content...]</p>
+                    <h2>Minimap</h2>
+
+                    <div class="contribution-video" style="float: right; max-width: 400px; margin: 2rem 0 1rem 3rem;">
+                        <video autoplay loop muted playsinline>
+                            <source src="videos/FunRock/minimap_vid.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <p>The Minimap feature is an interactive popup that the player can access when navigating the world.
+                        It displays an overview of the current level with a fog of war system to distinguish between tiles discovered in the
+                        current run, previous runs, and completely unexplored areas.</p>
+
+                    <p>The Minimap consists of two main parts: The map generator and the interactive UI popup.</p>
+
+                    <p>The map is generated by creating a texture matching the level dimensions, calculating one pixel per tile.
+                        Each tile is looked up for its terrain type, which maps to a color from a configurable dictionary.
+                        Roads and rivers override the base terrain color when present. The pixel array is then processed for fog of war,
+                        revealed tiles keep their color, previously discovered tiles are darkened and desaturated, and unexplored tiles are blacked out.</p>
+
+                    <p>The UI popup, other than displaying the map, provides zoom controls via pinching and panning by dragging. Sprite markers indicate the player's
+                        current position and the level's starting location, scaling appropriately with zoom level.</p>
+                    
+                    <div style="clear: both;"></div>
+
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; margin-top: 2rem;">
+                        <div class="contribution-image" style="flex: 0 1 auto; height: auto; overflow: visible; max-width: 380px; margin: 0 10% 0 4%;">
+                            <img src="images/FunRock/Minimap/minimap_2.png" alt="Minimap 2" style="width: 100%; height: auto; object-fit: contain;">
                         </div>
-                        <div class="contribution-media-column">
-                            <div class="contribution-image">
-                                <img src="images/funrock/minimap.png" alt="Minimap">
-                            </div>
+                        <div class="contribution-image" style="flex: 0 1 auto; height: auto; overflow: visible; max-width: 425px; margin: 5% 8% 0 0;">
+                            <img src="images/FunRock/Minimap/minimap_3.png" alt="Minimap 3" style="width: 100%; height: auto; object-fit: contain;">
                         </div>
+                    </div>
+
+                    <div style="margin-top: 2rem;">
+                        <div class="contribution-image" style="max-width: 240px; margin: 0 auto 1.5rem 255px; height: 220px; overflow: hidden;">
+                            <img src="images/FunRock/Minimap/minimap_1.png" alt="Minimap 1" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%;">
+                        </div>
+
+                        <div class="contribution-image" style="float: right; max-width: 250px; margin: -175px 0 1rem 2rem; height: auto; overflow: visible;">
+                            <img src="images/FunRock/Minimap/minimap_4.png" alt="Minimap 4" style="width: 100%; height: auto; object-fit: contain;">
+                        </div>
+
+                        <p><strong>Technical Highlights</strong></p>
+                        <ul class="contribution-features">
+                            <li><strong>Focal Point Zoom</strong> - Zoom maintains the screen point under the cursor/finger. The algorithm calculates the focal point's position in texture space, applies the zoom ratio, then adjusts the pan offset to keep that point stationary.</li>
+                            <li><strong>Caching</strong> - The texture, base pixels, zoom calculations, and widget dimensions are all cached. All cached values use nullable types with null-check guards, and clearing cache destroys the texture to prevent memory leaks.</li>
+                            <li><strong>Isometric perspective</strong> - The system supports isometric perspective for the relevant maps. This is achieved by rotating the texture 45-degrees, to match the corresponding map.  </li>
+                            <li><strong>Bidirectional Scroll Bar Sync</strong> - Scroll bars both reflect and control pan position. This makes the user see how far they can pan relative to the zoom level. </li>
+                        </ul>
+
+                        <div style="clear: both;"></div>
                     </div>
                 </div>
 
