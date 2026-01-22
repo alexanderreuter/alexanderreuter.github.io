@@ -19,23 +19,23 @@
         <div class="container">
             <h1 class="project-detail-title">FunRock Internship</h1>
 
-            <div class="project-about-section">
-                <div class="project-info-column">
-                    <h3>Contents</h3>
-                    <ul class="contributions-nav-list">
-                        <li><a href="#contribution-about">About</a></li>
+            <div class="project-about-section" style="display: flex; align-items: flex-start; justify-content: space-between; padding-top: 50px;">
+                <div class="project-info-column" style="margin-top: 0px;">
+                    <h3 style="margin-top: 0;">Table of Content</h3>
+                    <ul class="contributions-nav-list" style="margin-bottom: 0;">
+                        <li><a href="#contribution-about">About the Internship</a></li>
                         <li><a href="#contribution-tooltips">Tooltips</a></li>
                         <li><a href="#contribution-game-properties">Game Properties</a></li>
                         <li><a href="#contribution-codex">Codex</a></li>
                         <li><a href="#contribution-pantheon">Pantheon</a></li>
                         <li><a href="#contribution-minimap">Minimap</a></li>
-                        <li><a href="#reflection">Reflection</a></li>
+                        <li><a href="#reflection">Reflection & Learnings</a></li>
                     </ul>
                 </div>
 
-                <div class="project-media-column">
-                    <div class="project-title-image" style="max-width: 300px;">
-                        <img src="images/funrock/funrock_cover.png" alt="FunRock Internship">
+                <div class="project-media-column" style="width: 50%;">
+                    <div class="project-title-image" style="max-width: 150px; height: auto; overflow: visible; margin-left: auto;">
+                        <img src="images/FunRock/funrock.png" alt="FunRock Internship" style="width: 100%; height: auto;">
                     </div>
 
                     <h3>Internship Details</h3>
@@ -77,6 +77,8 @@
                         This was important to keep in mind when developing new features ensuring compatibility and maintainability across the shared codebase.</p>
 
                     <h3>Disclaimer</h3>
+                    <p>The following work showcased is from an unreleased and unannounced project. 
+                        All features, mechanics, and assets are currently in development and subject to change. Most of the art are placeholders. </p>
                 </div>
 
                 <div id="contribution-tooltips" class="contribution-section">
@@ -105,8 +107,8 @@
                     <div style="clear: both;"></div>
 
                     <div style="margin-top: 0rem;">
-                        <p><strong>Areas worth highlighting</strong></p>
-                        <ul>
+                        <p><strong>Technical Highlights</strong></p>
+                        <ul class="contribution-features">
                             <li><strong>Separation of Concerns</strong> - Core tooltip infrastructure is fully decoupled from game logic, making it reusable across projects.</li>
                             <li><strong>Processing Priority System</strong> - Tooltips have priority values to resolve tag conflicts during text formatting.</li>
                             <li><strong>Stackable Popup Pattern</strong> - Multiple tooltips can display simultaneously with proper depth management.</li>
@@ -329,13 +331,42 @@
                 </div>
 
                 <div id="reflection" class="contribution-section">
-                    <h2>Reflection</h2>
-                    <p>[Content...]</p>
+                    <h2>Reflection & Learnings</h2>
+
+                    <div class="reflection-block">
+                        <h3>Studio Culture</h3>
+                        <p>My eight months at FunRock were incredibly rewarding. I quickly realized that a developer's productivity is deeply tied to their environment. 
+                            Being surrounded by supportive colleagues and maintaining a proactive, positive mindset significantly increased the quality of my output. 
+                            I learned that when you feel you truly belong in a team, you are much more driven to contribute your best work.</p>
+                    </div>
+
+                    <div class="reflection-block" style="margin-top: 1.5rem;">
+                        <h3>Pre Production & Feedback</h3>
+                        <p>Something that was new for me was the introduction of Tech Reviews before starting to work on a task.
+                            To discussing logic with senior developers before any work provided fresh perspectives and helped catch potential roadblocks early. 
+                            I also found it useful to discuss pros and cons for different implementations, since it naturally brings areas that you might've missed with a specific solution. 
+                            This habit of mental prototyping has stayed with me when working individually aswell, I now take the time to reflect on and compare multiple solutions before I begin implementation.
+                            This experience, combined with a code review merge request loop, developed my eye for details and to always be open to feedback and iterative improvement.</p>
+                    </div>
+
+                    <div class="reflection-block" style="margin-top: 1.5rem;">
+                        <h3>Technical Growth</h3>
+                        <p>Working at FunRock allowed me to significantly refine my skills within the Unity ecosystem. 
+                        I also got to learn working and get comfortable with NGUI, a framework that was completely new to me. 
+                            I've equally gotten more used to navigating large scale projects and getting used to thinking a lot about long term scalability.</p>
+                        
+                        <p> Since FunRock structures their code in a modular way and reuse the code for multiple projects, 
+                            this have improved my ability to write systems generic and then apply a game specific layer on top.
+                            I also gained a better understanding of mobile optimization, 
+                            learning to balance complex UI systems and dynamic features while keeping a close eye on performance constraints and draw calls.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    
+    
     <footer id="contact" class="footer">
         <div class="footer-content">
             <div class="footer-info">
