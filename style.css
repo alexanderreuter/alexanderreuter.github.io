@@ -9,7 +9,7 @@
     --bg-secondary: #151515;
     --bg-card: #1a1a1a;
     --text-primary: #ffffff;
-    --text-secondary: #d4d4d4;
+    --text-secondary: #e0e0e0;
     --accent-primary: #2d5f3f;
     --accent-secondary: #3a7a4e;
     --accent-bright: #4a9960;
@@ -64,16 +64,47 @@ body {
     align-items: center;
 }
 
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
 .nav-logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--accent-primary);
+    color: var(--accent-bright);
     text-decoration: none;
     transition: transform var(--transition-fast);
 }
 
 .nav-logo:hover {
     transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    color: var(--accent-bright);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 2px solid var(--accent-bright);
+    border-radius: 6px;
+    transition: all var(--transition-normal);
+}
+
+.nav-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(74, 153, 96, 0.4);
 }
 
 .nav-menu {
@@ -132,7 +163,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 300px;
     gap: var(--spacing-lg);
-    align-items: start;
+    align-items: center;
 }
 
 .intro-text {
@@ -147,10 +178,19 @@ body {
 }
 
 .intro-title {
-    font-size: 1.5rem;
-    color: var(--accent-primary);
+    font-size: 1.75rem;
+    color: var(--text-primary);
     margin-bottom: var(--spacing-md);
     font-weight: 600;
+}
+
+.intro-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+    margin-top: var(--spacing-sm);
 }
 
 .intro-description {
@@ -168,24 +208,28 @@ body {
 }
 
 .intro-btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     padding: 0.6rem 1.2rem;
-    color: var(--accent-primary);
+    color: var(--accent-bright);
     text-decoration: none;
     font-size: 1rem;
     font-weight: 600;
-    border: 2px solid var(--accent-primary);
+    border: 2px solid var(--accent-bright);
     border-radius: 6px;
     transition: all var(--transition-normal);
 }
 
 .intro-btn:hover {
-    background-color: var(--accent-primary);
-    color: var(--bg-primary);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(74, 153, 96, 0.4);
 }
 
 .intro-photo {
     animation: fadeInUp 0.8s ease 0.2s backwards;
+    position: relative;
+    top: -40px;
 }
 
 .photo-placeholder {
@@ -637,7 +681,7 @@ section {
 
 .footer-item h4 {
     font-size: 1rem;
-    color: var(--accent-primary);
+    color: var(--accent-bright);
     margin-bottom: var(--spacing-xs);
     text-transform: uppercase;
     letter-spacing: 1px;
