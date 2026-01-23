@@ -19,7 +19,7 @@ const portfolioConfig = {
             page: "goap.html"
         },
         catan: {
-            enabled: false,
+            enabled: true,
             title: "Catan Project",
             navTitle: "Catan",
             page: "catan.html"
