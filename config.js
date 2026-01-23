@@ -31,7 +31,7 @@ const portfolioConfig = {
             page: "futuregames.html"
         },
         about: {
-            enabled: true,
+            enabled: false,
             title: "About Me / CV",
             navTitle: "About",
             page: "about.html"

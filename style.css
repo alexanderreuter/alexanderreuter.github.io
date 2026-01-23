@@ -160,19 +160,28 @@ body {
     margin-bottom: var(--spacing-sm);
 }
 
-.cv-link {
-    display: inline-block;
+.intro-links {
+    display: flex;
+    gap: var(--spacing-sm);
     margin-top: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.intro-btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
     color: var(--accent-primary);
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
+    border: 2px solid var(--accent-primary);
+    border-radius: 6px;
     transition: all var(--transition-normal);
 }
 
-.cv-link:hover {
-    color: var(--accent-secondary);
-    transform: translateX(5px);
+.intro-btn:hover {
+    background-color: var(--accent-primary);
+    color: var(--bg-primary);
 }
 
 .intro-photo {
@@ -248,6 +257,12 @@ body {
     overflow: hidden;
 }
 
+.project-showcase-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .project-showcase-placeholder {
     font-size: 1.5rem;
     color: var(--text-secondary);
@@ -256,6 +271,7 @@ body {
 
 .project-showcase-content {
     padding: var(--spacing-md);
+    position: relative;
 }
 
 .project-showcase-content h3 {
@@ -267,6 +283,25 @@ body {
 .project-showcase-content p {
     color: var(--text-secondary);
     line-height: 1.6;
+}
+
+.project-tags {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.project-tags img {
+    height: 36px;
+    width: auto;
+    opacity: 0.8;
+    transition: opacity var(--transition-normal);
+}
+
+.project-tags img:hover {
+    opacity: 1;
 }
 
 @media (max-width: 768px) {
@@ -698,7 +733,12 @@ section {
     box-shadow: 0 10px 30px rgba(45, 95, 63, 0.2);
 }
 
+.futuregames-project-card.disabled {
+    display: none;
+}
+
 .futuregames-project-image {
+    position: relative;
     width: 100%;
     aspect-ratio: 3/4;
     background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
@@ -714,6 +754,19 @@ section {
     object-fit: cover;
 }
 
+.project-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--accent-primary);
+    color: var(--bg-primary);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 4px;
+    z-index: 1;
+}
+
 .futuregames-project-content {
     padding: var(--spacing-md);
 }
@@ -727,6 +780,28 @@ section {
 .futuregames-project-content .tech-tags {
     margin-top: var(--spacing-sm);
     margin-bottom: var(--spacing-sm);
+}
+
+.project-details {
+    margin-top: var(--spacing-sm);
+    border-top: 1px solid var(--border-color);
+    padding-top: var(--spacing-sm);
+}
+
+.project-detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+.detail-label {
+    color: var(--text-secondary);
+}
+
+.detail-value {
+    color: var(--text-primary);
+    font-weight: 500;
 }
 
 .project-features {
