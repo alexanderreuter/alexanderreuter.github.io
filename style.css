@@ -813,6 +813,21 @@ section {
 
 .futuregames-project-content {
     padding: var(--spacing-md);
+    position: relative;
+}
+
+.futuregames-project-content .project-tags {
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.futuregames-project-content .project-tags img {
+    height: 28px;
+    width: auto;
+    opacity: 0.9;
 }
 
 .futuregames-project-content h3 {
