@@ -977,11 +977,12 @@ section {
 }
 
 .project-title-image {
-    width: 100%;
-    aspect-ratio: 5/4;
+    width: 85%;
+    aspect-ratio: 2/3;
     background-color: var(--bg-secondary);
     border-radius: 10px;
     overflow: hidden;
+    margin-left: auto;
 }
 
 .project-title-image img {
