@@ -269,10 +269,10 @@ body {
     margin-top: var(--spacing-lg);
 }
 
-.project-column {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
+.projects-layout > .project-showcase-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    width: calc(50% - var(--spacing-lg) / 2);
+    justify-self: center;
 }
 
 .project-showcase-card {
@@ -301,7 +301,8 @@ body {
     overflow: hidden;
 }
 
-.project-showcase-image img {
+.project-showcase-image img,
+.project-showcase-image video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -360,6 +361,10 @@ body {
 
     .projects-layout {
         grid-template-columns: 1fr;
+    }
+
+    .projects-layout > .project-showcase-card:last-child:nth-child(odd) {
+        width: 100%;
     }
 }
 
