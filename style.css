@@ -1025,9 +1025,22 @@ section {
 
 .project-info-column h3 {
     font-size: 1.3rem;
-    color: var(--accent-primary);
+    color: var(--text-primary);
     margin-top: var(--spacing-md);
     margin-bottom: var(--spacing-sm);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.project-info-column h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent-primary);
 }
 
 .project-info-column p {
@@ -1052,7 +1065,7 @@ section {
 }
 
 .project-details-list strong {
-    color: var(--accent-primary);
+    color: var(--accent-bright);
     margin-right: 0.5rem;
 }
 
