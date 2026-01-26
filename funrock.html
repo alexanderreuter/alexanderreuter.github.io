@@ -235,7 +235,6 @@
                         <p><strong>Technical Highlights</strong></p>
                         <ul class="contribution-features">
                             <li><strong>Event Driven UI Updates</strong> - Exposes OnStateChanged event that UI elements subscribe to. When a discovery is triggered, all displayed entries for that entity update automatically without screen refresh. Proper cleanup in OnDestroy prevents memory leaks.</li>
-<!--                            <li><strong>Polymorphic Filter System</strong> - Discovery based filtering. Codex Entry Data overrides to add rarity filtering while calling base first, extension without modifying base logic.</li>-->
                             <li><strong>Mutually Exclusive Filter Groups</strong> - Rarity filters are treated as a radio group, selecting one automatically deselects others. A OnFilterChanged handler detects rarity filters and clears the entire group before applying the new selection.</li>
                             <li><strong>Initialization with Caching</strong> - Codex Entry Collection instances are created once per section and cached. Property data is joined with user discovery data via factory methods that perform the join on first access only.</li>
                             <li><strong>Per Section Page State</strong> - Dictionary maintains independent page positions for each tab. Switching tabs remembers where you were.</li>
@@ -277,8 +276,8 @@
                         <p><strong>Technical Highlights</strong></p>
                         <ul class="contribution-features">
                             <li><strong>Scalability</strong> - The decoupled data approach allows designers to add new deities or balance costs without touching the core logic.</li>
-                            <li><strong>Factory Pattern for Perks</strong> - PerkBase.CreateRuntimeData() switches on PerkType enum to instantiate the correct perk subclass. Each perk type carries its own data (StatType for stat perks, LootType for loot perks) and accumulates values via AddValue().</li>
-                            <li><strong>LINQ-Based Bonus Aggregation</strong> - Calculating total bonuses uses type filtering and projection, keeping the aggregation logic concise and type-safe.</li>
+                            <li><strong>Factory Pattern for Perks</strong> - PerkType enum to instantiate the correct perk subclass. Each perk type carries its own data (StatType for stat perks, LootType for loot perks) and accumulates values.</li>
+                            <li><strong>LINQ-Based Bonus Aggregation</strong> - Calculating total bonuses uses type filtering and projection, keeping the aggregation logic concise and type safe.</li>
                             <li><strong>Localization Integration</strong> - Deity names, descriptions, and benefit text are pulled from localization sheets on load via SyncWithLocalization(), using a {SheetName}/{Field}/{ID} key pattern.</li>
                             <li><strong>Observer Pattern</strong> - The UI subscribes to an OnPantheonChanged event, ensuring the display updates instantly when an upgrade is purchased without requiring a menu reload.</li>
                         </ul>
@@ -333,7 +332,7 @@
                         <p><strong>Technical Highlights</strong></p>
                         <ul class="contribution-features">
                             <li><strong>Focal Point Zoom</strong> - Zoom maintains the screen point under the cursor/finger. The algorithm calculates the focal point's position in texture space, applies the zoom ratio, then adjusts the pan offset to keep that point stationary.</li>
-                            <li><strong>Caching</strong> - The texture, base pixels, zoom calculations, and widget dimensions are all cached. All cached values use nullable types with null-check guards, and clearing cache destroys the texture to prevent memory leaks.</li>
+                            <li><strong>Caching</strong> - The texture, base pixels, zoom calculations, and widget dimensions are all cached. All cached values use nullable types with null check guards, and clearing cache destroys the texture to prevent memory leaks.</li>
                             <li><strong>Isometric perspective</strong> - The system supports isometric perspective for the relevant maps. This is achieved by rotating the texture 45-degrees, to match the corresponding map.  </li>
                             <li><strong>Bidirectional Scroll Bar Sync</strong> - Scroll bars both reflect and control pan position. This makes the user see how far they can pan relative to the zoom level. </li>
                         </ul>
