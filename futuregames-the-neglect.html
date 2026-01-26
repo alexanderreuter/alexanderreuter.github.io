@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Neglect - Alexander Reuter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="nav-logo">Alexander Reuter</a>
+                <a href="documents/Alexander_Reuter_CV.pdf" class="nav-btn" target="_blank" download>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    CV
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section-content project-detail-page">
+        <div class="container">
+            <h1 class="project-detail-title">The Neglect</h1>
+
+            <div class="project-about-section">
+                <div class="project-info-column">
+                    <h2>About the Project</h2>
+                    <p>The Neglect is a psychological horror puzzle game and was the third game project I worked on at Futuregames.</p>
+                    <p>My main responsibilities for this project were level management and streaming, door management, and the interaction system.</p>
+                    
+                    <h3>My Contributions</h3>
+                    <ul class="contributions-nav-list">
+                        <li><a href="#contribution-1">Level Streaming</a></li>
+                        <li><a href="#contribution-2">Door Management</a></li>
+                        <li><a href="#contribution-3">Interaction System</a></li>
+                    </ul>
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+                    <h3>Project Details</h3>
+                    <ul class="project-details-list">
+                        <li><strong>Team Size:</strong> 12 people</li>
+                        <li><strong>Engine:</strong> Unreal Engine</li>
+                        <li><strong>Duration:</strong> 7 weeks - Full time</li>
+                        <li><strong>Platform:</strong> PC</li>
+                    </ul>
+
+                    <a href="https://futuregames.itch.io/fg23gp3-malwar-team02" target="_blank" class="itch-button">View on Itch.io →</a>
+                </div>
+
+                <div class="project-media-column">
+                    <div class="project-title-image">
+                        <img src="images/the-neglect/gp3_poster.png" alt="The Neglect Title">
+                    </div>
+
+                    <div class="project-video">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/mb9urdSkn2s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-detail-content">
+                <div id="contribution-1" class="contribution-section contribution-with-image align-bottom">
+                    <div class="contribution-text">
+                        <h2>Level Streaming</h2>
+                        <p>In this game the player is stuck in a time loop and therefore when certain interactions happen, a lot of the environment is changing. This is a core mechanic in the game and makes it so the layout and environment in the house is continually changing.</p>
+
+                        <p>To achieve this effect we divided parts of the house into separate levels which are loaded dynamically during run time.</p>
+
+                        <p>By utilizing level streaming it makes it possible for parts of the house to be divided into smaller chunks so that only the relevant parts are taking up resources and being rendered, as well as smoothly transition changes in the house.</p>
+                    </div>
+                    <div class="contribution-media-column">
+                        <p style="color: var(--text-secondary); margin-bottom: 0.25rem;">Example of usage:</p>
+                        <div class="contribution-video">
+                            <video width="100%" controls>
+                                <source src="videos/the-neglect/LevelSteraming2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="contribution-2" class="contribution-section">
+                    <div class="contribution-with-image">
+                        <div class="contribution-text">
+                            <h2>Door Management</h2>
+                            <p>Since this game takes place in a house and there are a lot of doors, we needed a system to handle all the doors. 
+                                What I worked on includes setting up the different ways you can interact with the doors as well as the logic and animation required for the interactions.</p>
+
+                            <p>There are in total six different interact states. <br> Examples below:</p>
+                        </div>
+                        <div class="contribution-media-column">
+                            <div class="contribution-image door-image">
+                                <img src="images/the-neglect/doorstate3.png" alt="Door System">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media-text-pair">
+                        <div class="pair-text">
+                            <p><strong>Open & Close</strong></p>
+                        </div>
+                        <div class="pair-media">
+                            <div class="contribution-video">
+                                <video width="100%" controls>
+                                    <source src="videos/the-neglect/door_OpenAndClose.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media-text-pair">
+                        <div class="pair-text">
+                            <p><strong>Locked</strong></p>
+                        </div>
+                        <div class="pair-media">
+                            <div class="contribution-video">
+                                <video width="100%" controls>
+                                    <source src="videos/the-neglect/door_Locked.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media-text-pair">
+                        <div class="pair-text">
+                            <p><strong>Partially open</strong></p>
+                        </div>
+                        <div class="pair-media">
+                            <div class="contribution-video">
+                                <video width="100%" controls>
+                                    <source src="videos/the-neglect/door_partually%20open.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media-text-pair">
+                        <div class="pair-text">
+                            <p><strong>No Handle</strong> - Attaches a handle to the door if handle is in inventory</p>
+                        </div>
+                        <div class="pair-media">
+                            <div class="contribution-video">
+                                <video width="100%" controls>
+                                    <source src="videos/the-neglect/door_OpenHandle.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media-text-pair">
+                        <div class="pair-text">
+                            <p><strong>Sequence</strong> - Plays a video sequence when interacting</p>
+                        </div>
+                        <div class="pair-media">
+                            <div class="contribution-video">
+                                <video width="100%" controls>
+                                    <source src="videos/the-neglect/door_sequence.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="contribution-3" class="contribution-section">
+                    <div class="contribution-with-image">
+                        <div class="contribution-text">
+                            <h2>Interaction System</h2>
+                            <p>For this project I developed an interaction system that allows the player to interact with actors in the world. The system works by attaching a component to any actor you want to make interactable.</p>
+
+                            <p>Through this component you can configure different settings for the interaction and tie events to what happens when the player interacts with the object.</p>
+
+                            <p>When an actor is interactable, the player can press the interact button. A raycast from the mouse checks if it's within range and hitting the interactable hitbox, triggering the interaction. The mouse cursor visually indicates interactable objects by increasing in size when hovering over them.</p>
+
+                            <p>There are several configurable settings, as shown in the examples below:</p>
+                        </div>
+                        <div class="contribution-media-column">
+                            <div class="contribution-image interaction-image-top">
+                                <img src="images/the-neglect/interactoverviewimg.png" alt="Interaction System Top">
+                            </div>
+                            <div class="contribution-image interaction-image-bottom">
+                                <img src="images/the-neglect/InteractImg.png" alt="Interaction System">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media-text-pair">
+                        <div class="pair-text">
+                            <p><strong>Interact</strong> - Visual feedback when hovering over interactable objects</p>
+                        </div>
+                        <div class="pair-media">
+                            <div class="contribution-video">
+                                <video width="100%" controls>
+                                    <source src="videos/the-neglect/interact_InteractHover.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media-text-pair">
+                        <div class="pair-text">
+                            <p><strong>Highlight</strong> - Outline shader applied to interactable objects on hover</p>
+                        </div>
+                        <div class="pair-media">
+                            <div class="contribution-video">
+                                <video width="100%" controls>
+                                    <source src="videos/the-neglect/interact_InteractVideo.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media-text-pair">
+                        <div class="pair-text">
+                            <p><strong>Inspect</strong> - Triggers close up inspection mode when interacting with objects</p>
+                        </div>
+                        <div class="pair-media">
+                            <div class="contribution-video">
+                                <video width="100%" controls>
+                                    <source src="videos/the-neglect/interact_Inspect.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media-text-pair">
+                        <div class="pair-text">
+                            <p><strong>Combined</strong> - Multiple interaction features enabled together</p>
+                        </div>
+                        <div class="pair-media">
+                            <div class="contribution-video">
+                                <video width="100%" controls>
+                                    <source src="videos/the-neglect/interact_CombinedInteract.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contribution-section">
+                    <h2>Team</h2>
+
+                    <div class="team-grid-three">
+                        <div class="team-column">
+                            <h3>Artists:</h3>
+                            <ul class="contribution-features">
+                                <li>Benjamin Angel</li>
+                                <li>Francesco Ortolani</li>
+                                <li>Primus Engström</li>
+                                <li>Johanna Nilsson</li>
+                                <li>Julia Budych</li>
+                                <li>Mateusz Banasiak</li>
+                            </ul>
+                        </div>
+
+                        <div class="team-column">
+                            <h3>Designers:</h3>
+                            <ul class="contribution-features">
+                                <li>Kamil Siwek</li>
+                                <li>Eryk Wrochna</li>
+                            </ul>
+                        </div>
+
+                        <div class="team-column">
+                            <h3>Programmers:</h3>
+                            <ul class="contribution-features">
+                                <li>Alexander Reuter</li>
+                                <li>Evert Andersson</li>
+                                <li>Cristian Stirbu</li>
+                                <li>Michał Szcząchor</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-item">
+                    <h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        Email
+                    </h4>
+                    <p><a href="mailto:alexanderreuter.dev@gmail.com">alexanderreuter.dev@gmail.com</a></p>
+                </div>
+                <div class="footer-item">
+                    <h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        Phone
+                    </h4>
+                    <p><a href="tel:+46767746711">+46 767 746 711</a></p>
+                </div>
+                <div class="footer-item">
+                    <h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Address
+                    </h4>
+                    <p>Västra Varvsgatan 24 Lgh 1406<br>211 15 Malmö, Sweden</p>
+                </div>
+                <div class="footer-item">
+                    <h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        LinkedIn
+                    </h4>
+                    <a href="https://www.linkedin.com/in/alexander-reuter-89b212209/" target="_blank" class="linkedin-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        View Profile
+                    </a>
+                </div>
+            </div>
+            <p class="footer-copyright">&copy; 2025 Alexander Reuter. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

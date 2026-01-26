@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catan Simulation - Alexander Reuter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="nav-logo">Alexander Reuter</a>
+                <a href="documents/Alexander_Reuter_CV.pdf" class="nav-btn" target="_blank" download>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                    CV
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section-content project-detail-page">
+        <div class="container">
+            <h1 class="project-detail-title">Catan Simulation</h1>
+            
+            <div class="project-hero-video" style="margin: var(--spacing-sm) 0 var(--spacing-lg) 0; padding: var(--spacing-md); background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 10px;">
+                <video autoplay loop muted playsinline style="width: 100%; display: block; border-radius: 8px;">
+                    <source src="videos/catan/catan_demo.mkv" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="project-detail-content">
+                <div id="about" class="contribution-section">
+                    <h2>About</h2>
+                    <p> Project Geeble (Catan) is a multiplayer <strong>work in progress</strong> game I'm currently working on built in Unreal Engine 5.4.
+                        The game is inspired by Catan and function very similar to Catan at the current state.
+                    </p>
+
+                    <p> The plan is to expand with more 4X-style features as well, such as implementing different factions, economic systems, varied maps,
+                        and deeper development progression.</p>
+
+                    <h3>Features</h3>
+                    <ul class="contribution-features">
+                        <li>Networked game with support up to 4 players + lobby and session management.</li>
+                        <li>Hexgrid and procedurally generated board + management.</li>
+                        <li>Turn system with dice rolls and timed turns.</li>
+                        <li>Resource generation and management.</li>
+                        <li>Trading system. Player to player and bank trading.</li>
+                        <li>Settlement and road building.</li>
+                        <li>Development card system with unique effects.</li>
+                        <li>Robber + blocking mechanics.</li>
+                        <li>Scoring with victory point trophies (Longest Road, Largest Army etc.).</li>
+                        <li>Support for different factions.</li>
+                        <li>AI opponent support.</li>
+                    </ul>
+
+                    <h3>Technical Highlights</h3>
+                    <ul class="contribution-features">
+                        <li>Authoritative server architecture with client/server component separation.</li>
+                        <li>Replicated game state with RPC based communication.</li>
+                        <li>Pathfinding using DFS with backtracking (calculate Longest Road).</li>
+                        <li>Cube coordinate hex grid with procedural intersection/edge generation.</li>
+                        <li>Data driven configuration via Data Assets and Data Tables.</li>
+                        <li>Modular card effect system using Strategy pattern.</li>
+                        <li>Component structure with clear separation of concerns.</li>
+                    </ul>
+
+                    <br>
+                    
+                    <p> This page is still a WIP and more in depth technical showcase is currently under construction.
+                        <br> If you have any questions don't hesitate to contact me!</p>
+                    
+                    <h3>Simulated gameplay with 4 players:</h3>
+                    <div class="project-hero-video" style="margin: var(--spacing-sm) 0 var(--spacing-lg) 0; padding: var(--spacing-md); background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: 10px;">
+                        <video autoplay loop muted playsinline style="width: 100%; display: block; border-radius: 8px;">
+                            <source src="videos/catan/catan_network_2.mkv" type="video/mp4">
+                        </video>
+                    </div>
+
+                </div>
+                
+<!--                <div id="feature-1" class="contribution-section">-->
+<!--                    <h2>Feature 1</h2>-->
+
+<!--                    <div style="float: right; max-width: 400px; margin: 0 0 1rem 2rem;">-->
+<!--                        <div class="contribution-image">-->
+<!--                            <img src="images/catan/feature1.png" alt="Feature 1" style="width: 100%; height: auto;">-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    <p>Feature</p>-->
+
+<!--                    <div style="clear: both;"></div>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div id="feature-2" class="contribution-section">-->
+<!--                    <h2>Feature 2</h2>-->
+
+<!--                    <div style="float: right; max-width: 400px; margin: 0 0 1rem 2rem;">-->
+<!--                        <div class="contribution-image">-->
+<!--                            <img src="images/catan/feature2.png" alt="Feature 2" style="width: 100%; height: auto;">-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    <p>Feature</p>-->
+
+<!--                    <div style="clear: both;"></div>-->
+<!--                </div>-->
+<!--                -->
+<!--                <div id="feature-3" class="contribution-section">-->
+<!--                    <h2>Feature 3</h2>-->
+
+<!--                    <div style="float: right; max-width: 400px; margin: 0 0 1rem 2rem;">-->
+<!--                        <div class="contribution-image">-->
+<!--                            <img src="images/catan/feature3.png" alt="Feature 3" style="width: 100%; height: auto;">-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+<!--                    <p>Feature</p>-->
+
+<!--                    <div style="clear: both;"></div>-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-item">
+                    <h4>Email</h4>
+                    <p><a href="mailto:alexanderreuter.dev@gmail.com">alexanderreuter.dev@gmail.com</a></p>
+                </div>
+                <div class="footer-item">
+                    <h4>Phone</h4>
+                    <p><a href="tel:+46767746711">+46 767 746 711</a></p>
+                </div>
+                <div class="footer-item">
+                    <h4>Address</h4>
+                    <p>Västra Varvsgatan 24 Lgh 1406<br>211 15 Malmö, Sweden</p>
+                </div>
+                <div class="footer-item">
+                    <h4>LinkedIn</h4>
+                    <a href="https://www.linkedin.com/in/alexander-reuter-89b212209/" target="_blank" class="linkedin-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        View Profile
+                    </a>
+                </div>
+            </div>
+            <p class="footer-copyright">&copy; 2025 Alexander Reuter. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
