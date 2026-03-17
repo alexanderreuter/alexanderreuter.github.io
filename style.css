@@ -775,6 +775,8 @@ section {
     overflow: hidden;
     border: 1px solid var(--border-color);
     transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    text-decoration: none;
+    color: inherit;
 }
 
 .futuregames-project-card:hover {
